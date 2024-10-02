@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+      "outDir": ".serverless/build" /* Specify an output folder for all emitted files. */,
+      "allowJs": true,
+      "maxNodeModuleJsDepth": 10,
+      "allowSyntheticDefaultImports": true,
+      "types": ["reflect-metadata", "jest", "node"],
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "plugins": [
+        {
+          "transform": "typia/lib/transform"
+        }
+      ],
+      "strictNullChecks": true,
+      "strict": true
+    },
+    "exclude": ["tests/*"]
+  }
+  

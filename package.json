@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "@suites/di.inversify": "^3.0.0",
+    "@suites/doubles.jest": "^3.0.0",
+    "@suites/unit": "^3.0.0",
+    "@types/jest": "^29.5.13",
+    "@types/node": "^22.7.4",
+    "inversify": "^6.0.2",
+    "jest": "^29.7.0",
+    "reflect-metadata": "^0.2.2",
+    "ts-jest": "^29.2.5",
+    "ts-jest-mocker": "^1.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  },
+  "name": "suites-inversify",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "license": "MIT"
+}
