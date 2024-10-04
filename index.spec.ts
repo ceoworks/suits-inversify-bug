@@ -67,12 +67,12 @@ describe('sociable', () => {
   let database: Mocked<Database>;
   let httpService: Mocked<HttpService>;
   beforeAll(async () => {
-    const {unit, unitRef} = await TestBed.sociable(UserService).expose(UserApi).compile();
+    const {unit, unitRef} = await TestBed.sociable(UserService).expose(DI.UserApi as never).compile();
     
     underTest = unit;    
-    userApi = unitRef.get(UserApi);
-    database = unitRef.get(Database);
-    httpService = unitRef.get(HttpService);
+    userApi = unitRef.get(DI.UserApi);
+    database = unitRef.get(DI.Database);
+    httpService = unitRef.get(DI.HttpService);
   });
 
   it('should work', async () => {
@@ -87,8 +87,7 @@ describe('sociable', () => {
     expect(httpService.get).toHaveBeenCalledWith('/random-user/');
     expect(database.saveUser).toHaveBeenCalledWith(userFixture);
   });
-
-})
+});
 
 
 
