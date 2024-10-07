@@ -17,6 +17,7 @@ const enum DI {
     UserApi = "UserApi",
     HttpService = "HttpService",
     Database = "Database",
+    UserService = "UserService"
 }
 
 @injectable()
@@ -63,14 +64,11 @@ export class UserService {
 
 describe('sociable', () => {
   let underTest: UserService;
-  let userApi: Mocked<UserApi>;
   let database: Mocked<Database>;
   let httpService: Mocked<HttpService>;
   beforeAll(async () => {
     const {unit, unitRef} = await TestBed.sociable(UserService).expose(DI.UserApi as never).compile();
-    
     underTest = unit;    
-    userApi = unitRef.get(DI.UserApi);
     database = unitRef.get(DI.Database);
     httpService = unitRef.get(DI.HttpService);
   });

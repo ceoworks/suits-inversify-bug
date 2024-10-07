@@ -65,7 +65,6 @@ async function main() {
     const {unit, unitRef} = await TestBed.sociable(UserService).expose(UserApi).compile();
     
     const underTest = unit;    
-    let userApi = unitRef.get(UserApi);
     let database = unitRef.get(Database);
     let httpService = unitRef.get(HttpService);
 
@@ -77,6 +76,8 @@ async function main() {
 
     const result = await underTest.generateRandomUser();
 }
+
+main();
 
 
 
